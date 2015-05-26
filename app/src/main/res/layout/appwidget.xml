@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/widget"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="@dimen/widgetWidth"
+              android:layout_height="@dimen/widgetHeight"
+              android:background="@drawable/icon_bg"
+              android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/widgetTextSize"
+        />
+    <TextView
+        android:id="@+id/diff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/daysColor"
+        android:textSize="@dimen/widgetDaysTextSize5"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/comparison"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/widgetTextSize"
+        />
+</LinearLayout>

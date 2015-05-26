@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">DaysCounter</string>
+    <string name="app_name" translatable="false">Days Counter Widget</string>
+    <string name="app_dir" translatable="false">DaysCounter</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="icon" translatable="false">icon</string>
+    <string name="day_after" translatable="false">DAYS LEFT</string>
+    <string name="day_before" translatable="false">DAYS AGO</string>
+    <string name="day_today" translatable="false">TODAY</string>
+    <string name="howToUse">How to use</string>
+    <string name="YouTubeURL" translatable="false">https://www.youtube.com/watch?v=QllV0haUeYA</string>
+    <string name="reportProblem">Report a problem</string>
+    <string name="reportDescription">What\'s wrong? Is number of days different? Or something else?\nPlease tell me a problem to solve it.</string>
+    <string name="reportProblemMailTitle">Report a problem about Days Counter</string>
+    <string name="reportProblemMailBody">Please tell me a problem.</string>
+    <string name="rateThisApp">Rate this app</string>
+    <string name="rateDescription">Thank you for your improvement request and good rating.</string>
+    <string name="mailerNotFound">Mail app not found.</string>
 </resources>

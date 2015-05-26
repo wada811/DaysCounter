@@ -1,0 +1,4 @@
+<resources>
+    <string name="keyTitle" translatable="false">keyTitle$1%d</string>
+    <string name="keyDate" translatable="false">keyDate$1%d</string>
+</resources>

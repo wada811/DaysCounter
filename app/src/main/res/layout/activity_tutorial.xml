@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tutorialMargin"
+            android:layout_marginRight="@dimen/tutorialMargin"
+            android:layout_marginTop="@dimen/tutorialMargin"
+            android:gravity="center"
+            android:text="@string/howToUse"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/how2use"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/tutorialTextMargin"
+            android:layout_marginLeft="@dimen/tutorialTextMargin"
+            android:layout_marginRight="@dimen/tutorialTextMargin"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/howToUse"
+            android:scaleType="fitCenter"
+            android:src="@drawable/how2add" />
+        <Button
+            android:id="@+id/reportProblem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tutorialButtonMargin"
+            android:layout_marginRight="@dimen/tutorialButtonMargin"
+            android:layout_marginTop="@dimen/tutorialButtonMargin"
+            android:gravity="center"
+            android:text="@string/reportProblem"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/tutorialTextMargin"
+            android:layout_marginLeft="@dimen/tutorialTextMargin"
+            android:layout_marginRight="@dimen/tutorialTextMargin"
+            android:text="@string/reportDescription"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/rateThisApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tutorialButtonMargin"
+            android:layout_marginRight="@dimen/tutorialButtonMargin"
+            android:layout_marginTop="@dimen/tutorialButtonMargin"
+            android:gravity="center"
+            android:text="@string/rateThisApp"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/tutorialTextMargin"
+            android:layout_marginLeft="@dimen/tutorialTextMargin"
+            android:layout_marginRight="@dimen/tutorialTextMargin"
+            android:text="@string/rateDescription"
+            android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>

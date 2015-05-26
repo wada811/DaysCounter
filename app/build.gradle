@@ -9,13 +9,18 @@ android {
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            proguardFiles 'proguard-joda-time.pro'
+            proguardFiles 'proguard-butter-knife.pro'
         }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
     }
 }
 
@@ -24,4 +29,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.1.1'
     // Joda-Time Android
     compile 'net.danlew:android.joda:2.7.2'
+    // ButterKnife
+    compile 'com.jakewharton:butterknife:6.1.0'
+    // Library
+    compile project(':library')
 }

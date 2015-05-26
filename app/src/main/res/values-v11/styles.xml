@@ -1,0 +1,9 @@
+<resources>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo"></style>
+    <style name="Theme.Dialog" parent="@android:style/Theme.Holo.Dialog"></style>
+    <!--  -->
+    <style name="Theme.Transparent" parent="android:Theme.Holo.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

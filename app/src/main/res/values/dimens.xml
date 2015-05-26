@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tutorial -->
+    <dimen name="tutorialMargin">8dp</dimen>
+    <dimen name="tutorialButtonMargin">12dp</dimen>
+    <dimen name="tutorialTextMargin">16dp</dimen>
+    <!-- Widget -->
+    <dimen name="widgetWidth">72dp</dimen>
+    <dimen name="widgetHeight">72dp</dimen>
+    <dimen name="widgetTextSize">12sp</dimen>
+    <dimen name="widgetDaysTextSize1">32sp</dimen>
+    <dimen name="widgetDaysTextSize2">32sp</dimen>
+    <dimen name="widgetDaysTextSize3">32sp</dimen>
+    <dimen name="widgetDaysTextSize4">28sp</dimen>
+    <dimen name="widgetDaysTextSize5">22sp</dimen>
+</resources>

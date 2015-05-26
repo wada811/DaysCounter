@@ -1,0 +1,10 @@
+<resources>
+    <string name="howToUse">使い方</string>
+    <string name="reportProblem">問題を報告する</string>
+    <string name="reportDescription">何か問題がありましたでしょうか？\n日数が違いますか？それとも他の問題ですか？\n問題を解決するために私に教えて下さい。</string>
+    <string name="reportProblemMailTitle">DaysCounterWidget の問題を報告する</string>
+    <string name="reportProblemMailBody">私に問題を教えて下さい。</string>
+    <string name="rateThisApp">アプリを評価する</string>
+    <string name="rateDescription">改善要望と良い評価をありがとうございます。</string>
+    <string name="mailerNotFound">メールアプリが見つかりませんでした。</string>
+</resources>
