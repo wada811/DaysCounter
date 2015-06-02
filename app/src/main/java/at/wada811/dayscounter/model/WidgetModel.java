@@ -2,9 +2,9 @@ package at.wada811.dayscounter.model;
 
 import android.content.Context;
 import com.wada811.android.utils.PreferenceUtils;
+import com.wada811.observableproperty.ObservableProperty;
 import org.joda.time.LocalDate;
 import at.wada811.dayscounter.R;
-import at.wada811.dayscounter.observable.ObservableProperty;
 
 public class WidgetModel {
 

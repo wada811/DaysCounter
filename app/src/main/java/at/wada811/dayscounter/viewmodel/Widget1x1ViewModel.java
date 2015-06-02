@@ -1,6 +1,7 @@
 package at.wada811.dayscounter.viewmodel;
 
 import android.content.Context;
+import com.wada811.observableproperty.ObservableProperty;
 import org.joda.time.Duration;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalDateTime;
@@ -9,8 +10,7 @@ import org.joda.time.MutablePeriod;
 import at.wada811.dayscounter.R;
 import at.wada811.dayscounter.model.WidgetModel;
 import at.wada811.dayscounter.model.utils.WidgetTextSize;
-import at.wada811.dayscounter.observable.Func;
-import at.wada811.dayscounter.observable.ObservableProperty;
+import backport.java8.util.function.Function;
 
 public class Widget1x1ViewModel {
 
@@ -26,26 +26,26 @@ public class Widget1x1ViewModel {
         this.model = model;
         this.title = model.title.createReactiveObservableProperty();
         this.date = model.date.createReactiveObservableProperty();
-        this.diffDays = this.date.createReactiveObservableProperty(new Func<String, Integer>() {
+        this.diffDays = this.date.createReactiveObservableProperty(new Function<String, Integer>() {
             @Override
             public Integer apply(String date){
                 return calcDiffDays(date);
             }
         });
-        this.diff = this.diffDays.createReactiveObservableProperty(new Func<Integer, String>() {
+        this.diff = this.diffDays.createReactiveObservableProperty(new Function<Integer, String>() {
             @Override
             public String apply(Integer diffDays){
                 return String.valueOf(Math.abs(diffDays));
             }
         });
-        this.diffTextSize = this.diff.createReactiveObservableProperty(new Func<String, Float>() {
+        this.diffTextSize = this.diff.createReactiveObservableProperty(new Function<String, Float>() {
             @Override
             public Float apply(String diff){
                 int dimenId = WidgetTextSize.getSize(diff.length());
                 return context.getResources().getDimension(dimenId);
             }
         });
-        this.comparison = this.diffDays.createReactiveObservableProperty(new Func<Integer, String>() {
+        this.comparison = this.diffDays.createReactiveObservableProperty(new Function<Integer, String>() {
             @Override
             public String apply(Integer diffDays){
                 if(diffDays == 0){

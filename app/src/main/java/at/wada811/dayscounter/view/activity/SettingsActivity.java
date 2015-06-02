@@ -32,18 +32,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.wada811.android.utils.LogUtils;
 import com.wada811.android.utils.ResourceUtils;
+import com.wada811.observableproperty.binding.DatePickerBinding;
+import com.wada811.observableproperty.binding.EditTextBinding;
+import com.wada811.observableproperty.binding.EditTextBinding.EditTextTextChanged;
 import org.joda.time.LocalDateTime;
 import java.io.File;
 import at.wada811.dayscounter.CrashExceptionHandler;
 import at.wada811.dayscounter.R;
 import at.wada811.dayscounter.model.WidgetModel;
 import at.wada811.dayscounter.model.utils.DatePickerUtils;
-import at.wada811.dayscounter.observable.DatePickerBinding;
-import at.wada811.dayscounter.observable.EditTextBinding;
-import at.wada811.dayscounter.observable.EditTextBinding.EditTextTextChanged;
-import at.wada811.dayscounter.observable.Func;
 import at.wada811.dayscounter.view.appwidget.CounterAppWidgetProvider;
 import at.wada811.dayscounter.viewmodel.Widget1x1ViewModel;
+import backport.java8.util.function.Function;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -97,7 +97,7 @@ public class SettingsActivity extends FragmentActivity implements OnClickListene
         WidgetModel model = new WidgetModel(this, appWidgetId);
         viewModel = new Widget1x1ViewModel(this, model);
         // Title
-        new EditTextBinding(titleEditText).bind(new Func<EditText, String>() {
+        new EditTextBinding(titleEditText).bind(new Function<EditText, String>() {
             @Override
             public String apply(EditText editText){
                 return editText.getText().toString();
@@ -114,7 +114,7 @@ public class SettingsActivity extends FragmentActivity implements OnClickListene
         LogUtils.d("date: " + date);
         LocalDateTime dateTime = date != null ? new LocalDateTime(date) : LocalDateTime.now();
         DatePickerBinding datePickerBinding = new DatePickerBinding(datePicker);
-        datePickerBinding.bind(new Func<DatePicker, String>() {
+        datePickerBinding.bind(new Function<DatePicker, String>() {
             @Override
             public String apply(DatePicker datePicker){
                 return DatePickerUtils.format(datePicker);
@@ -131,9 +131,6 @@ public class SettingsActivity extends FragmentActivity implements OnClickListene
             dateTime.getMonthOfYear() - 1,
             dateTime.getDayOfMonth(),
             datePickerBinding.getOnDateChangedListener());
-        diffTextView.setText(viewModel.getDiff().getValue());
-        diffTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, viewModel.getDiffTextSize().getValue());
-        daysTextView.setText(viewModel.getComparison().getValue());
 
         // Button
         submitButton.setOnClickListener(this);
